@@ -7,6 +7,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -34,6 +35,11 @@ public class Mang extends Application {
         Scene stseen = new Scene(paneel,LAIUS, PIKKUS);
         lava.setScene(stseen);
         lava.show();
+
+        Button stardinupp = new Button("START");
+        stardinupp.setLayoutX(100);
+        stardinupp.setLayoutY(100);
+        paneel.getChildren().add(stardinupp);
     }
 
     private void update(GraphicsContext gc) {
