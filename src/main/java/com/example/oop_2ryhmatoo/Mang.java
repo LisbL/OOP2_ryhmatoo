@@ -4,6 +4,9 @@ import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -21,6 +24,7 @@ public class Mang extends Application {
 
     @Override
     public void start(Stage lava) throws IOException {
+        Parent juur = FXMLLoader.load(getClass().getResource("Pealehekülg.fxml"));
         lava.setTitle("RIP Monke");
 
         StackPane paneel = new StackPane();
