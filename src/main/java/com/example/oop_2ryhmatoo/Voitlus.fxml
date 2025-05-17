@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_2ryhmatoo.Voitlus">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#273e54" height="400.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="150.0" layoutX="140.0" layoutY="236.0" stroke="BLACK" strokeType="INSIDE" width="446.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff6f21" height="150.0" layoutX="14.0" layoutY="236.0" stroke="BLACK" strokeType="INSIDE" width="105.0" />
+      <Button layoutX="21.0" layoutY="260.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Ründa" />
+      <Button layoutX="22.0" layoutY="298.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Tugev rünnak" />
+      <Button layoutX="21.0" layoutY="336.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Maga" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="200.0" layoutX="12.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="576.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="96.0" layoutX="110.0" layoutY="66.0" stroke="BLACK" strokeType="INSIDE" width="105.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="96.0" layoutX="389.0" layoutY="66.0" stroke="BLACK" strokeType="INSIDE" width="105.0" />
+   </children>
+</AnchorPane>
