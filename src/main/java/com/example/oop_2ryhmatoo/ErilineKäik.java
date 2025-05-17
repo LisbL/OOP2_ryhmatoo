@@ -1,3 +1,4 @@
+package com.example.oop_2ryhmatoo;
 public class ErilineKäik {
     private String nimetus;
     private int baasDMG;

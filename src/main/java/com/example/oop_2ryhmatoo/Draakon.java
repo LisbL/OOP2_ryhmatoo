@@ -1,3 +1,5 @@
+package com.example.oop_2ryhmatoo;
+
 public class Draakon {
     private String nimi;
     private int dmg;

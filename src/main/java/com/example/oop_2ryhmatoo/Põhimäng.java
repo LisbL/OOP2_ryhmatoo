@@ -9,7 +9,7 @@
     neid failist ka lugema. Näiteks võib tekitada logifaili ja selle põhjal
     korraldada käikude tagasivõtmise.
  */
-
+package com.example.oop_2ryhmatoo;
 import java.util.Scanner;
 
 public class Põhimäng {

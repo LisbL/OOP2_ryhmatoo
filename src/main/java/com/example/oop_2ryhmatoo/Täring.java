@@ -1,4 +1,6 @@
+package com.example.oop_2ryhmatoo;
 import java.util.Random;
+
 
 public class Täring {
     private int alampiir;
