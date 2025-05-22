@@ -22,7 +22,7 @@ public class Mang extends Application {
             Scene stseen = new Scene(juur);
             lava.setScene(stseen);
 
-            StseeniVahetaja.seaPealava(lava);
+            StseeniVahetaja.seaPealava(lava); //Automaatselt vahetab stseeni, kui võitlus lõppeb
 
             lava.show();
         }  catch(Exception e) {

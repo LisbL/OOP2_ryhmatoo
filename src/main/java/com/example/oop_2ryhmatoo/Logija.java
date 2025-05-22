@@ -7,7 +7,7 @@ public class Logija {
         kuulaja = uusKuulaja;
     }
 
-    public static void logi(String sonum) {
+    public static void logi(String sonum) { // Meetod sõnumite kuvamiseks GUI-s
         if (kuulaja != null) {
             kuulaja.logi(sonum);
         } else {
