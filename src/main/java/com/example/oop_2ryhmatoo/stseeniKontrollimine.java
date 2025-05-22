@@ -13,7 +13,7 @@ import java.io.IOException;
 
 public class stseeniKontrollimine {
     private Scene stseen;
-
+    //pärast nupu vajutust, vahetab karaktervalikustseeni
     @FXML
     public void vahetaKarakterValikusse(ActionEvent event) throws IOException {
         FXMLLoader laadija = new FXMLLoader(getClass().getResource("/com/example/oop_2ryhmatoo/Valik.fxml"));

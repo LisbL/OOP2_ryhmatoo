@@ -31,7 +31,7 @@ public class Täring {
     public int getVisatud() {
         return visatud;
     }
-
+    //täringu viskamine
     public void viska() {
         Random rand = new Random();
         visatud = alampiir + rand.nextInt(ülempiir - alampiir + 1);

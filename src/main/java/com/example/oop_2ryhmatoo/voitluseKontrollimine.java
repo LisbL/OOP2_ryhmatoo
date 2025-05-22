@@ -13,6 +13,7 @@ public class voitluseKontrollimine implements Logija.LogiKuulaja{
     private Draakon mangija;
     private Draakon vastane;
 
+    //paneb kirja milline on mängija ja milline on vastane
     public void seadistaMangija(Draakon mangija) {
         this.mangija = mangija;
         Täring täring = new Täring(1, 6);
@@ -25,7 +26,7 @@ public class voitluseKontrollimine implements Logija.LogiKuulaja{
     public void alusta() {
         logi("Võitlus algas! Valitud draakon: " + mangija.getNimi());
     }
-
+// ründamine
     @FXML
     public void rynda() {
         logi("Rünnakukäik - - -");
@@ -33,7 +34,7 @@ public class voitluseKontrollimine implements Logija.LogiKuulaja{
         kontrolliSeisund();
         arvutiKäik();
     }
-
+    //eriline ründamine
     @FXML
     private void kasutaErilineKäik() {
         logi("Eriline käik!!!");
@@ -41,13 +42,13 @@ public class voitluseKontrollimine implements Logija.LogiKuulaja{
         kontrolliSeisund();
         arvutiKäik();
     }
-
+    //kui mängija tahab magada
     @FXML
     private void maga() {
         logi("Draakon norskab. . .");
         arvutiKäik();
     }
-
+    //arvuti ründamine ja teised aktsioonid
     private void arvutiKäik() {
         if (vastane.läksMagama() || mangija.läksMagama()) return;
 
@@ -62,7 +63,7 @@ public class voitluseKontrollimine implements Logija.LogiKuulaja{
         kontrolliSeisund();
         logi("Mängija kord - - -");
     }
-
+    //kontrollib kas keegi kaotas
     private void kontrolliSeisund() {
         if (vastane.läksMagama()) {
             logi(mangija.getNimi() + " võitis!!");
@@ -76,13 +77,13 @@ public class voitluseKontrollimine implements Logija.LogiKuulaja{
             return;
         }
     }
-
+    //deaktiveerib nupud
     private void nupudKeelatud() {
         ryndaNupp.setDisable(true);
         erilineNupp.setDisable(true);
         magaNupp.setDisable(true);
     }
-
+    //logide loomine
     public void logi(String tekst) {
         logiVali.appendText(tekst + "\n");
     }

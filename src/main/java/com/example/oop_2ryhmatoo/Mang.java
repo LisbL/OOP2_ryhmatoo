@@ -13,6 +13,7 @@ import java.util.Objects;
 
 public class Mang extends Application {
 
+    // siin hakab mäng.
     @Override
     public void start(Stage lava) throws IOException {
         try {

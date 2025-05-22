@@ -23,9 +23,7 @@ public class valikuKontrollimine {
     private ErilineKäik purskkaev = new ErilineKäik("Purskkaev", 20, täring);
     private ErilineKäik maavärin = new ErilineKäik("Maavärin", 14, täring);
 
-    public valikuKontrollimine() throws IOException {
-    }
-
+    //loob draakonid
     @FXML
     public void initialize() {
         draakonValik.getItems().addAll(
@@ -37,6 +35,7 @@ public class valikuKontrollimine {
         draakonValik.getSelectionModel().selectFirst();
     }
 
+    //pärast nupu vajutust, vahetab võitlusstseeni
     @FXML
     private void vahetaVoitlusesse(ActionEvent event) throws IOException {
         Draakon valitud = draakonValik.getSelectionModel().getSelectedItem();
