@@ -1,40 +1,45 @@
 Projekti koostasid Nils Jaagup Peters ja Lisbeth Lepp.
 
+Mäng on esimese projekti edasi arendatud versioon.
 See on meelelahutuslik mäng, kus mängija peab valima draakoni ning võitlema
 arvuti draakoni vastu. Võitluses mängivad rolli inimese otsused ja juhus. Mäng
 lõppeb, kui arvuti draakon või mängija draakon sureb.
 
-- Klass Põhimäng on klass, kus paikneb mängu-tsükli põhiline osa ja sisaldab meetode
-mängija ja vastase käikudeks.
-- Klassi Draakoni eesmärk on draakoni baasiks,
-kus määratakse tema atribuudid. Tähtsamad meetodid on ründa(), mis teeb vähem haiget
-vastasele, ja kasutaErilistKäiku(), mis teeb rohkem haiget, aga kasutab energiat, mille
-pärast ei saa seda kogu aeg kasutada.
-- Klass ErilineKäik on abiks raskema löögi vormistamisel. See kasutab klassi Täring,
-et saada löögi jaoks vajalik kordaja, mis muudab lõpliku löögi tugevust.
-- Klass Täring on abiks suvalise kordaja saamiseks. Põhifunktsioon on viska(), mis
-genereerib suvalise numbri vahemikus 1-6.
+Klass Mang - Peaklass, kus mängu saab aktiveerida. Selle olulisem meetod on main ja start(), mis seadistab valmis GUI.
 
-Mõlemad rühmaliikmed tegutsesid, et projekt valmis saaks. Kordamööda vaatasid
-üksteise koodid üle. Kõige pealt oli ideede otsimine, seejärel alustasid baasiga,
-siis järk-järgult arendasid erinevaid atribuute põhimängu. Näiteks, kui põhimängu
- algne versioon ja draakoni klassid olid loodud, siis hakkasid uurima, kuidas mängu
- lisada juhus ning veel valikuid mängijale. Lõpuks oli vaja põhimängus lihvida
- kood üle.
+Klass Draakon - Põhiklass, kust mängus olevad draakonid oma atribuudid ja tegevused saavad.
 
-Lisbeth kirjutas klassi Draakon ja Nils kirjutas klassi ErilineKäik. Koos kirjutasid
-ja vaatasid üle klassi Põhimäng ning Täringu. Orienteeruvalt kulus mõlemal umbes
-4-5 tundi.
+Klass Täring - Annab juhuarvu, mis on vajalik ründe tugevuse arvutamiseks. Selleks on viska().
 
-Otseselt ei tekkinud suuri murekohti projekti tegemisel. Pigem tekkisid väiksemad,
-mille sai ületatud mõne minutiga. Näiteks kuidas anda mängijale võimaluse
-valida mitme draakoni seast, või kuidas panna mõned pausid tegevuste vahele.
+Klass ErilineKäik - Annab draakonitele oskuse, mille tugevus on ründest võimsam. Aktiveerimiseks on kasuta().
 
-Mänguga oleme rahul, aga siiski on arenguruumi. Näiteks võiks draakonitele lisada
-veel erinevaid võimeid. Veel üks mõte on lisada rohkem erinevaid vaenlasi,
-kelle seast arvuti võib valida. võiks lisada ka pikema lahingu variandi, kus tuleb
-rohkem vaenlasi ühes võitluses.
+Klass Logija - Klass loodud sündmuste ja sõnumite kuvamiseks GUI-s. Kõik println-id vahetasime
+välja meetodiga logi().
 
-Erinevate koodilõikude testimiseks lõimegi põhiklassi ehk põhimäng. Seal saime
-käivitada erinevaid hetk tagasi loodud meetode, et kontrollida, kas nad korrektselt
-töötavad.
+Klass StseeniVahetaja - Klass loodud pärast võitlust tulemuse kuvamiseks. Selleks kasutame meetodit vahetaTulemusega().
+
+Klass StseeniKontrollimine - Pealehelt valikulehele liikumiseks, kasutades meetodit vahetaKarakterValikusse().
+See kontroller on seotud pealehekylg.fxml stseeniga.
+
+Klass ValikuKontrollimine - Valikulehe kontroller, mis sätestas võimalikud draakonivalikud. Selleks on initialize().
+Teine tähtis meetod on vahetaVoitlusesse(), mis vahetab stseeni valitud draakoniga.
+
+Klass VoitluseKontrollimine - Võitluse kontroller, mis tegeleb võitluse läbi mängimisega. Sisaldab meetode nagu ryna(), kasutaErilineKäik(),
+arvutiKäik().
+
+Klass TulemusKontrollimine - Tulemuse kontroller, tulemuse kuvamiseks sõltuvalt kas võideti või kaotati. Sellega aitab meetod kuvaTulemus().
+
+Mõlemad rühmaliikmed tegelesid projekti valmistamisega. Me kirjutasime vahepeal kordamööda,
+ja vahepeal kirjutas üks ja teine vaatas üle. Kõige rohkem tööd läks Stseeni loomise ja kontrollimise
+peale.
+
+Me põhimõtteliselt kirjutasime kõik klasse koos. Kokku läks igal gruppi kaaslasel 6-7 tundi.
+
+Kõige rohkem probleeme tegi õige teksti stseeni peale tekitamine ja stseenide vahel vahetamine.
+Nende probleemide lahendamiseks lugesime oma koodi rahulikult läbi ja proovisime veateadetest aru saada.
+Eriti hästi aitas sellega IntelliJ "debug" funktsioon.
+
+Selle mänguga oleme rahul, aga muidugi on tal arenguruumi. Eriti on disain veel väga primitiivne. Selle
+parandamiseks võiks korralike pilte kasutada. Milliseid on vaja kas avalikutest allikatest leida või
+neid ise disainida. Teiseks võiks draakonite ja vastaste võimed laiendada ja sellega mängukogemuse huvitamaks teha.
+Võiks ka veel mängule lugu luua, mida võib näiteks "Visual noveli" vormis teha.

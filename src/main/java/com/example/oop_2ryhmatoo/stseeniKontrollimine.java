@@ -12,13 +12,7 @@ import java.io.IOException;
 
 
 public class stseeniKontrollimine {
-    private Stage lava;
     private Scene stseen;
-    private Parent juur;
-
-    public void vahetaPealeheküljele(ActionEvent event){
-
-    }
 
     @FXML
     public void vahetaKarakterValikusse(ActionEvent event) throws IOException {
@@ -30,12 +24,4 @@ public class stseeniKontrollimine {
         lava.setScene(stseen);
         lava.show();
     }
-
-    /*public void vahetaVoitlusesse(ActionEvent event) throws IOException {
-        Parent juur = FXMLLoader.load(getClass().getResource("Voitlus.fxml"));
-        lava = (Stage)((Node)event.getSource()).getScene().getWindow();
-        stseen = new Scene(juur);
-        lava.setScene(stseen);
-        lava.show();
-    }*/
 }
