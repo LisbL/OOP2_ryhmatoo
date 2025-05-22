@@ -1,6 +1,7 @@
 package com.example.oop_2ryhmatoo;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -19,19 +20,22 @@ public class stseeniKontrollimine {
 
     }
 
+    @FXML
     public void vahetaKarakterValikusse(ActionEvent event) throws IOException {
-        Parent juur = FXMLLoader.load(getClass().getResource("Valik.fxml"));
-        lava = (Stage)((Node)event.getSource()).getScene().getWindow();
+        FXMLLoader laadija = new FXMLLoader(getClass().getResource("/com/example/oop_2ryhmatoo/Valik.fxml"));
+        Parent juur = laadija.load();
+
+        Stage lava = (Stage)((Node)event.getSource()).getScene().getWindow();
         stseen = new Scene(juur);
         lava.setScene(stseen);
         lava.show();
     }
 
-    public void vahetaVoitlusesse(ActionEvent event) throws IOException {
+    /*public void vahetaVoitlusesse(ActionEvent event) throws IOException {
         Parent juur = FXMLLoader.load(getClass().getResource("Voitlus.fxml"));
         lava = (Stage)((Node)event.getSource()).getScene().getWindow();
         stseen = new Scene(juur);
         lava.setScene(stseen);
         lava.show();
-    }
+    }*/
 }
