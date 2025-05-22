@@ -45,13 +45,13 @@ public class Draakon {
         int lõppDMG = (int) (kordaja * getDmg());
         vastane.setHP(vastane.getHP() - lõppDMG);
 
-        System.out.println(nimi + " ründab vastast " + vastane.getNimi());
-        System.out.println("Täring andis: " + täring.getVisatud());
-        System.out.println(vastane + " kaotas " + lõppDMG + " HP-d");
+        Logija.logi(nimi + " ründab vastast " + vastane.getNimi());
+        Logija.logi("Täring andis: " + täring.getVisatud());
+        Logija.logi(vastane + " kaotas " + lõppDMG + " HP-d");
         if (vastane.läksMagama()) {
             vastane.setHP(0);
         } else {
-            System.out.println(vastane + " jäi järgi " + vastane.getHP() + " HP-d");
+            Logija.logi(vastane + " jäi järgi " + vastane.getHP() + " HP-d");
         }
         try {
             Thread.sleep(2000); // paus enne järgmist tegevust
@@ -65,7 +65,7 @@ public class Draakon {
             erilineKäik.kasuta(this, vastane);
             energia -= 20;
         } else {
-            System.out.println("Pole piisavalt energiat.");
+            Logija.logi("Pole piisavalt energiat.");
         }
 
     }

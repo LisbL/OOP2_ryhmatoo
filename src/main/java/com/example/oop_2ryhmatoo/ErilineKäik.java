@@ -16,13 +16,13 @@ public class ErilineKäik {
         int lõppDMG = (int) (kordaja * baasDMG);
         p2.setHP(p2.getHP() - lõppDMG);
 
-        System.out.println(p1 + " kasutab supervõimet " + nimetus + " " + p2 + " vastu!");
-        System.out.println("Täringuvise andis: " + täring.getVisatud());
-        System.out.println(p2 + " kaotas " + lõppDMG + " HP-d.");
+        Logija.logi(p1 + " kasutab supervõimet " + nimetus + " " + p2 + " vastu!");
+        Logija.logi("Täringuvise andis: " + täring.getVisatud());
+        Logija.logi(p2 + " kaotas " + lõppDMG + " HP-d.");
         if (p2.läksMagama()) {
             p2.setHP(0);
         } else {
-            System.out.println(p2 + " jäi järgi " + p2.getHP() + " HP-d");
+            Logija.logi(p2 + " jäi järgi " + p2.getHP() + " HP-d");
         }
         try {
             Thread.sleep(2000); // paus enne järgmist tegevust

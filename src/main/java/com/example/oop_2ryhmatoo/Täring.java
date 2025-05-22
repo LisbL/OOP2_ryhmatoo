@@ -35,6 +35,6 @@ public class Täring {
     public void viska() {
         Random rand = new Random();
         visatud = alampiir + rand.nextInt(ülempiir - alampiir + 1);
-        System.out.println("Visati täringut");
+        Logija.logi("Visati täringut");
     }
 }

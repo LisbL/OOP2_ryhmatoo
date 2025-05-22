@@ -18,6 +18,6 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="200.0" layoutX="12.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="576.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="96.0" layoutX="110.0" layoutY="66.0" stroke="BLACK" strokeType="INSIDE" width="105.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="96.0" layoutX="389.0" layoutY="66.0" stroke="BLACK" strokeType="INSIDE" width="105.0" />
-      <TextArea fx:id="logiVali" layoutX="140.0" layoutY="235.0" prefHeight="150.0" prefWidth="446.0" editable="false" />
+      <TextArea fx:id="logiVali" editable="false" layoutX="140.0" layoutY="235.0" prefHeight="150.0" prefWidth="446.0" />
    </children>
 </AnchorPane>

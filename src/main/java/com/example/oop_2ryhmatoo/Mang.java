@@ -21,6 +21,9 @@ public class Mang extends Application {
 
             Scene stseen = new Scene(juur);
             lava.setScene(stseen);
+
+            StseeniVahetaja.seaPealava(lava);
+
             lava.show();
         }  catch(Exception e) {
             e.printStackTrace();

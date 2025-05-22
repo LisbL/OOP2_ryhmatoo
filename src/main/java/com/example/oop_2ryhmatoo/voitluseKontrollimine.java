@@ -4,7 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 
-public class voitluseKontrollimine {
+public class voitluseKontrollimine implements Logija.LogiKuulaja{
     @FXML private Button ryndaNupp;
     @FXML private Button erilineNupp;
     @FXML private Button magaNupp;
@@ -17,6 +17,12 @@ public class voitluseKontrollimine {
         this.mangija = mangija;
         Täring täring = new Täring(1, 6);
         this.vastane = new Draakon("MONKE 2000", 5, 100, new ErilineKäik("Banaani vise", 12, täring), täring);
+
+        Logija.seaKuulaja(this);
+        alusta();
+    }
+
+    public void alusta() {
         logi("Võitlus algas! Valitud draakon: " + mangija.getNimi());
     }
 
@@ -54,15 +60,20 @@ public class voitluseKontrollimine {
         }
 
         kontrolliSeisund();
+        logi("Mängija kord - - -");
     }
 
     private void kontrolliSeisund() {
         if (vastane.läksMagama()) {
             logi(mangija.getNimi() + " võitis!!");
             nupudKeelatud();
+            StseeniVahetaja.vahetaTulemusega("Tulemus.fxml", "TUBLII, DRAAKON VÕITIS!!!");
+            return;
         } else if (mangija.läksMagama()) {
             logi("Sa kaotasid...");
             nupudKeelatud();
+            StseeniVahetaja.vahetaTulemusega("Tulemus.fxml", "You've been monke'd, väga kahju :(");
+            return;
         }
     }
 
@@ -72,7 +83,7 @@ public class voitluseKontrollimine {
         magaNupp.setDisable(true);
     }
 
-    private void logi(String tekst) {
+    public void logi(String tekst) {
         logiVali.appendText(tekst + "\n");
     }
 }
